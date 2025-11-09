@@ -194,19 +194,3 @@ semantic-latent-engineering/
 
 ```
 
----
-
-### 💡 Explicação Rápida
-
-- Todos os `{{placeholders}}` são campos editáveis automáticos (ótimo para LLMs preencherem programaticamente).
-- O diagrama `mermaid` agora é **compatível com GitHub**, sem exibir os estilos brutos.
-- O layout segue um equilíbrio entre manifesto científico e usabilidade de desenvolvedor.
-- Compatível com **Zenodo**, **GitHub Pages**, e ferramentas de documentação como **MkDocs** ou **Docusaurus**.
-
----
-
-Posso agora gerar a **versão preenchida com placeholders reais** (ex: seu nome, Zenodo genérico, versão 0.1.0, badges reais do shields.io, etc.)  
-para que você já possa subir o `README.md` no repositório e começar o commit inicial.  
-
-Quer que eu gere essa versão “real” (com todos os badges e URLs configurados para o projeto)?
-```
