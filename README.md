@@ -37,11 +37,6 @@ taxonomias e experimentos que estruturam o campo.
 
 ---
 
-## 📁 Estrutura do Repositório
-
-
----
-
 ## 🌐 Descrição Geral
 
 A **Semantic Latent Engineering (SLE)** é uma disciplina emergente que integra cognição computacional, linguística aplicada e teoria dos sistemas dinâmicos.  
@@ -131,7 +126,7 @@ semantic-latent-engineering/
 ├── LICENSE
 ├── CITATION.cff
 │
-├── docs/
+├── chapters/
 │   ├── parte1_fundamentos/
 │   │   ├── cap1_da-instrucao-a-invocacao.md
 │   │   └── cap2_otimizacao-densidade-semantica.md
@@ -148,8 +143,11 @@ semantic-latent-engineering/
 │   ├── datasets/
 │   └── results/
 │
-├── app/                      # Interface interativa (React.js)
-│   ├── src/
+├── main/              # Interface interativa (html e javascript)
+│   ├── index.html
+│   ├── assets/css/style.css
+│   ├── assets/js/main.js
+│   ├── assets/icons/favicon.svg
 │   └── README.md
 │
 └── links/                    # Conexões com frameworks e APIs externas
