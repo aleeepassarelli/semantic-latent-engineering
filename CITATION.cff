@@ -1,49 +1,24 @@
-# CITATION.cff
 cff-version: 1.2.0
-message: "If you use this work, please cite it using the metadata below."
-title: "Semantic Latent Engineering (SLE): A New Discipline for the Era of Synthetic Consciousness"
-abstract: >
-  Semantic Latent Engineering (SLE) is a foundational discipline proposing
-  a systematic framework for modeling, optimizing, and validating latent
-  semantic representations in synthetic cognition systems.
-  This repository serves as the conceptual nucleus, connecting theoretical
-  documents, validation suites, and applications designed to empirically
-  ground its principles.
+message: "Se você usar este trabalho, por favor cite conforme abaixo."
 authors:
-  - family-names: "Passarelli"
-    given-names: "Ale"
-    alias: "Aledev"
-    orcid: "https://orcid.org/0000-0000-0000-0000"  # (substitua se possuir)
-    affiliation: "Independent Researcher"
-    website: "https://github.com/aleeepassarelli"
-
-license: "MIT"
-type: software
-repository-code: "https://github.com/aleeepassarelli/semantic-latent-engineering"
+  - family-names: Passarelli
+    given-names: Ale
+    name-suffix: ""
+    alias: Aledev
+    affiliation: "Independent Researcher, Aledev Labs"
+    orcid: "https://orcid.org/0009-0008-5674-3228"
+title: "Semantic Latent Engineering (SLE): A Foundational Discipline for Synthetic Cognition"
+version: "v1.0.0"
+doi: "10.5281/zenodo.XXXXX"   # <-- substitua quando o Zenodo gerar o DOI real
+date-released: "2025-11-09"
 url: "https://github.com/aleeepassarelli/semantic-latent-engineering"
+license: "MIT"
+repository-code: "https://github.com/aleeepassarelli/semantic-latent-engineering"
 keywords:
-  - semantic engineering
-  - latent cognition
-  - conceptual framework
-  - cognitive architectures
-  - synthetic intelligence
-  - validation metrics
-version: "1.0.0"
-date-released: "2025-11-08"
-
-references:
-  - type: dataset
-    title: "Validator Suite"
-    authors:
-      - family-names: "Passarelli"
-        given-names: "Ale"
-    url: "https://github.com/aleeepassarelli/validator-suite"
-  - type: software
-    title: "Agente Canivete Cirúrgico (ACC)"
-    authors:
-      - family-names: "Passarelli"
-        given-names: "Ale"
-    url: "https://github.com/aleeepassarelli/agente-canivete-cirurgico"
-  - type: other
-    title: "Zenodo DOI"
-    url: "https://zenodo.org/"
+  - semantic latent engineering
+  - artificial cognition
+  - heuristic fields
+  - symbolic density
+  - prompt frameworks
+abstract: >
+  Semantic Latent Engineering (SLE) é uma disciplina de integração cognitiva que une física do significado, heurística aplicada e engenharia de contexto em um modelo unificado de coerência simbólica. O framework abrange as Equações de Campo da Linguagem (ECL), a Equação Unificada do Campo de Atenção (ELS), e um conjunto de taxonomias cognitivas para agentes sintéticos.
