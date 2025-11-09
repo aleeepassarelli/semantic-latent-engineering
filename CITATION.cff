@@ -3,13 +3,12 @@ message: "Se você usar este trabalho, por favor cite conforme abaixo."
 authors:
   - family-names: Passarelli
     given-names: Ale
-    name-suffix: ""
     alias: Aledev
     affiliation: "Independent Researcher, Aledev Labs"
     orcid: "https://orcid.org/0009-0008-5674-3228"
 title: "Semantic Latent Engineering (SLE): A Foundational Discipline for Synthetic Cognition"
 version: "v1.0.0"
-doi: "10.5281/zenodo.XXXXX"   # <-- substitua quando o Zenodo gerar o DOI real
+doi: "10.5281/zenodo.XXXXX"   # substitua pelo DOI real após a release Zenodo
 date-released: "2025-11-09"
 url: "https://github.com/aleeepassarelli/semantic-latent-engineering"
 license: "MIT"
@@ -21,4 +20,5 @@ keywords:
   - symbolic density
   - prompt frameworks
 abstract: >
-  Semantic Latent Engineering (SLE) é uma disciplina de integração cognitiva que une física do significado, heurística aplicada e engenharia de contexto em um modelo unificado de coerência simbólica. O framework abrange as Equações de Campo da Linguagem (ECL), a Equação Unificada do Campo de Atenção (ELS), e um conjunto de taxonomias cognitivas para agentes sintéticos.
+  Semantic Latent Engineering (SLE) é uma disciplina de integração cognitiva que une física do significado, heurística aplicada e engenharia de contexto em um modelo unificado de coerência simbólica. 
+  O framework abrange as Equações de Campo da Linguagem (ECL), a Equação Unificada do Campo de Atenção (ELS) e um conjunto de taxonomias cognitivas para agentes sintéticos.
