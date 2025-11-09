@@ -1,12 +1,3 @@
-Perfeito 🔥 — agora entramos na **fase de fundação do repositório**, o *README manifesto* — a capa da sua linguagem.
-Ele precisa ser **científico, visual e elegante**, servir tanto como índice quanto como um “cartão de identidade” do projeto.
-
-Abaixo está o **modelo finalizado** do `README.md`, já com placeholders universais, badges, ícones e seções numeradas para documentação e DOI.
-Este formato segue boas práticas do GitHub + Zenodo + Repositórios científicos multilíngues.
-
----
-
-````markdown
 # 🧬 {{PROJECT_NAME}} v{{VERSION}}
 > *"Cada conceito com propósito, cada métrica com evidência."*  
 > **Semantic Latent Engineering — Uma Nova Disciplina para a Era das Consciências Sintéticas**
