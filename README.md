@@ -83,26 +83,18 @@ flowchart LR
 
 ```bash
 # Clone o repositório
-git clone https://github.com/{{USER}}/{{REPO_NAME}}.git
-cd {{REPO_NAME}}
+git clone https://github.com/aleeepassarelli/semantic-latent-engineering.git
+cd semantic-latent-engineering
 
-# Instale dependências para validação (opcional)
-pip install -r requirements.txt
 ```
 
 ### Uso Básico
 
-Os capítulos estão organizados em `/docs` e podem ser explorados individualmente:
+# No terminal, execute:
+open index.html        # macOS
+xdg-open index.html    # Linux
+start index.html       # Windows
 
-```bash
-open docs/parte1_fundamentos/cap1_da-instrucao-a-invocacao.md
-```
-
-Para gerar documentação completa (HTML, PDF):
-
-```bash
-mkdocs serve
-```
 
 ---
 
@@ -194,18 +186,18 @@ semantic-latent-engineering/
 
 ## 📘 Créditos
 
-**Autor Principal:** {{AUTHOR_NAME}}
+**Autor Principal:** Aledev
 **Colaboradores:** {{COLLABORATORS}}
-**Instituição:** {{INSTITUTION}}
-**Contato:** {{AUTHOR_EMAIL}}
+**GitHub:** https://github.com/aleeepassarelli
+**Contato:** al.passarelli@gmail.com
 
 ---
 
 ## 🔗 Links Importantes
 
-* 📄 [Documentação Completa](docs/)
-* 🧠 [Framework ACC](https://github.com/{{USER}}/agente-canivete-cirurgico)
-* 🧪 [Validator Suite](https://github.com/{{USER}}/validator-suite)
+* 📄 [Documentação Completa](chapters/)
+* 🧠 [Framework ACC](https://github.com/aleeepassarelli/ACC/tree/main)
+* 🧪 [Validator Suite](https://github.com/aleeepassarelli/ACC/tree/main/tools)
 * ⚛️ [App Demo (React)](https://lovable.dev/demo/{{REPO_NAME}})
 * 🌐 [Publicação Zenodo DOI]({{DOI_URL}})
 
