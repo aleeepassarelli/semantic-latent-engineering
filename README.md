@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/icons/sle-icon.svg" alt="SLE Icon" width="120"/><br/>
+  <img src="assets/icons/favicon.svg" alt="SLE Icon" width="120"/><br/>
 </p>
 
 <p align="center">
