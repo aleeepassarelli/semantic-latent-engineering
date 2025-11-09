@@ -1,0 +1,49 @@
+# CITATION.cff
+cff-version: 1.2.0
+message: "If you use this work, please cite it using the metadata below."
+title: "Semantic Latent Engineering (SLE): A New Discipline for the Era of Synthetic Consciousness"
+abstract: >
+  Semantic Latent Engineering (SLE) is a foundational discipline proposing
+  a systematic framework for modeling, optimizing, and validating latent
+  semantic representations in synthetic cognition systems.
+  This repository serves as the conceptual nucleus, connecting theoretical
+  documents, validation suites, and applications designed to empirically
+  ground its principles.
+authors:
+  - family-names: "Passarelli"
+    given-names: "Ale"
+    alias: "Aledev"
+    orcid: "https://orcid.org/0000-0000-0000-0000"  # (substitua se possuir)
+    affiliation: "Independent Researcher"
+    website: "https://github.com/aleeepassarelli"
+
+license: "MIT"
+type: software
+repository-code: "https://github.com/aleeepassarelli/semantic-latent-engineering"
+url: "https://github.com/aleeepassarelli/semantic-latent-engineering"
+keywords:
+  - semantic engineering
+  - latent cognition
+  - conceptual framework
+  - cognitive architectures
+  - synthetic intelligence
+  - validation metrics
+version: "1.0.0"
+date-released: "2025-11-08"
+
+references:
+  - type: dataset
+    title: "Validator Suite"
+    authors:
+      - family-names: "Passarelli"
+        given-names: "Ale"
+    url: "https://github.com/aleeepassarelli/validator-suite"
+  - type: software
+    title: "Agente Canivete Cirúrgico (ACC)"
+    authors:
+      - family-names: "Passarelli"
+        given-names: "Ale"
+    url: "https://github.com/aleeepassarelli/agente-canivete-cirurgico"
+  - type: other
+    title: "Zenodo DOI"
+    url: "https://zenodo.org/"
