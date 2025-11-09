@@ -208,5 +208,3 @@ semantic-latent-engineering/
 
 ```
 
-Deseja que eu agora gere a **versão em chinês simplificado (README_ZH.md)** com o mesmo tom técnico-acadêmico, mantendo o layout original e placeholders idênticos?
-```
