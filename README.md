@@ -9,9 +9,6 @@
   <a href="https://github.com/aleeepassarelli/semantic-latent-engineering">
     <img src="https://img.shields.io/badge/Type-Conceptual_Framework-blue.svg" alt="Conceptual Framework">
   </a>
-  <a href="https://zenodo.org/">
-    <img src="https://img.shields.io/badge/DOI-Pending-orange.svg" alt="DOI">
-  </a>
   <a href="https://github.com/aleeepassarelli/semantic-latent-engineering/actions">
     <img src="https://img.shields.io/badge/Validation-Under_Review-lightgrey.svg" alt="Validation Status">
   </a>
