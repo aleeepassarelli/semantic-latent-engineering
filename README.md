@@ -171,7 +171,7 @@ semantic-latent-engineering/
    ```bash
    git checkout -b feature/novo-capitulo
    ```
-3. Adicione seu capítulo ou correção (`/docs/...`)
+3. Adicione seu capítulo ou correção (`/chapters/...`)
 4. Valide consistência semântica e IDR
 5. Abra um Pull Request
 
