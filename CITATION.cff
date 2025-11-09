@@ -4,8 +4,9 @@ authors:
   - family-names: "Passarelli"
     given-names: "Ale"
     orcid: "https://orcid.org/0009-0008-5674-3228"
-title: "Semantic Latent Engineering"
-version: "1.2.2"
+    affiliation: "Aledev Labs — Independent Researcher"
+title: "Semantic Latent Engineering (SLE): A Foundational Discipline for Synthetic Cognition"
+version: "1.2.3"
 doi: "10.5281/zenodo.17650950"
 date-released: "2025-11-09"
 url: "https://github.com/aleeepassarelli/semantic-latent-engineering"
@@ -18,4 +19,6 @@ keywords:
   - "symbolic density"
   - "prompt frameworks"
 abstract: >
-  Semantic Latent Engineering (SLE) is a foundational discipline for synthetic cognition, uniting heuristic dynamics, semantic geometry, and field-based language theory into a unified framework for cognitive architectures.
+  Semantic Latent Engineering (SLE) is a foundational discipline for synthetic cognition.
+  It unifies semantic field theory, heuristic dynamics, and cognitive geometry into a
+  coherent framework for studying meaning emergence in large language models and symbolic systems.
