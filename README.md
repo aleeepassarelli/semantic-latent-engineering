@@ -91,9 +91,9 @@ cd semantic-latent-engineering
 ### Uso Básico
 
 # No terminal, execute:
-open index.html        # macOS
-xdg-open index.html    # Linux
-start index.html       # Windows
+* open index.html        # macOS
+* xdg-open index.html    # Linux
+* start index.html       # Windows
 
 
 ---
