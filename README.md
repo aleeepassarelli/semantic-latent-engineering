@@ -1,17 +1,44 @@
+<p align="center">
+  <img src="assets/icons/sle-icon.svg" alt="SLE Icon" width="120"/><br/>
+</p>
+
+<p align="center">
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT">
+  </a>
+  <a href="https://github.com/aleeepassarelli/semantic-latent-engineering">
+    <img src="https://img.shields.io/badge/Type-Conceptual_Framework-blue.svg" alt="Conceptual Framework">
+  </a>
+  <a href="https://zenodo.org/">
+    <img src="https://img.shields.io/badge/DOI-Pending-orange.svg" alt="DOI">
+  </a>
+  <a href="https://github.com/aleeepassarelli/semantic-latent-engineering/actions">
+    <img src="https://img.shields.io/badge/Validation-Under_Review-lightgrey.svg" alt="Validation Status">
+  </a>
+</p>
+
+<p align="center">
+  🌐
+  <a href="README.md">Português</a> |
+  <a href="README_EN.md">English</a> |
+  <a href="README_ZH.md">简体中文</a>
+</p>
+
+---
+
 # 🧬 Semantic Latent Engineering (SLE)
-> *"Cada conceito com propósito, cada métrica com evidência."*  
-> **Semantic Latent Engineering — Uma Nova Disciplina para a Era das Consciências Sintéticas**
 
-![Icon]({{ICON_URL}})
+> **Cada conceito com propósito, cada métrica com evidência.**
 
-[![License]({{BADGE_LICENSE_URL}})]({{LICENSE_URL}}) 
-[![Python]({{BADGE_PYTHON_URL}})]({{PYTHON_SUPPORT_URL}}) 
-[![Validation Score]({{BADGE_VALIDATION_URL}})]({{VALIDATION_PAGE_URL}}) 
-[![DOI]({{BADGE_DOI_URL}})]({{DOI_URL}})
+**Semantic Latent Engineering (SLE)** é uma disciplina emergente dedicada a projetar,
+medir e refinar representações cognitivas latentes em sistemas de inteligência sintética.
+Este repositório serve como base conceitual e exploratória para documentos,
+taxonomias e experimentos que estruturam o campo.
 
-[![Português]({{BADGE_PT_URL}})]({{README_PT_LINK}}) 
-[![English]({{BADGE_EN_URL}})]({{README_EN_LINK}}) 
-[![简体中文]({{BADGE_ZH_URL}})]({{README_ZH_LINK}})
+---
+
+## 📁 Estrutura do Repositório
+
 
 ---
 
