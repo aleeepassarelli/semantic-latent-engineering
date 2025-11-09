@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Semantic Latent Engineering — Uma Nova Disciplina para a Era das Consciências Sintéticas">
+  <title>🧬 Semantic Latent Engineering (SLE)</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/sle-icon.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <h1>🧬 Semantic Latent Engineering</h1>
+    <p class="subtitle">Cada conceito com propósito, cada métrica com evidência.</p>
+    <nav class="lang">
+      <a href="README.md" target="_blank">Português</a> |
+      <a href="README_EN.md" target="_blank">English</a> |
+      <a href="README_ZH.md" target="_blank">简体中文</a>
+    </nav>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>📘 Navegação</h2>
+      <ul>
+        <li><button onclick="loadChapter('1_da-instrucao-a-invocacao.md')">Capítulo 1: Da Instrução à Invocação</button></li>
+        <li><button onclick="loadChapter('2_otimizacao-densidade-semantica.md')">Capítulo 2: Otimização de Densidade Semântica</button></li>
+        <li><button onclick="loadChapter('3_abc-expandido.md')">Capítulo 3: ABC Expandido</button></li>
+        <li><button onclick="loadChapter('4_cpp-taxonomia.md')">Capítulo 4: Cognitive Priming Patterns</button></li>
+        <li><button onclick="loadChapter('5_mmor.md')">Capítulo 5: Multi-Model Output Refinement</button></li>
+        <li><button onclick="loadChapter('6_validacao-futura.md')">Capítulo 6: Síntese e Direções Futuras</button></li>
+        <li><button onclick="loadChapter('glossario-tecnico.md')">Glossário Técnico</button></li>
+      </ul>
+
+      <h2>🔗 Links</h2>
+      <ul>
+        <li><a href="https://github.com/aleeepassarelli/agente-canivete-cirurgico" target="_blank">Framework ACC</a></li>
+        <li><a href="https://github.com/aleeepassarelli/validator-suite" target="_blank">Validator Suite</a></li>
+        <li><a href="https://lovable.dev/demo/semantic-latent-engineering" target="_blank">App Demo</a></li>
+        <li><a href="https://zenodo.org/" target="_blank">Publicação Zenodo</a></li>
+      </ul>
+    </aside>
+
+    <main id="content">
+      <article class="intro">
+        <h2>Bem-vindo à Semantic Latent Engineering (SLE)</h2>
+        <p>
+          Este é o portal oficial da disciplina <strong>SLE</strong> — um espaço interativo
+          para explorar seus fundamentos teóricos, taxonomias cognitivas e
+          validações empíricas.  
+        </p>
+        <p>Selecione um capítulo ao lado para começar.</p>
+      </article>
+    </main>
+  </div>
+
+  <footer>
+    <p>© 2025 <a href="https://github.com/aleeepassarelli" target="_blank">Aledev</a> — MIT License</p>
+  </footer>
+
+  <!-- Dependências -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    async function loadChapter(file) {
+      const response = await fetch(`chapters/${file}`);
+      const text = await response.text();
+      document.getElementById("content").innerHTML = marked.parse(text);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
