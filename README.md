@@ -128,6 +128,9 @@ semantic-latent-engineering/
 │   ├── parte3_operacoes/
 │   │   ├── cap5_mmor.md
 │   │   └── cap6_validacao-futura.md
+│   ├── appendix_equacao-els.md
+│   ├── appendix_equacoes-ecl.md
+│   ├── appendix_relacao-els-ecl.md
 │   └── glossario-tecnico.md
 │
 ├── research/
