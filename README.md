@@ -1,4 +1,4 @@
-# 🧬 {{PROJECT_NAME}} v{{VERSION}}
+# 🧬 Semantic Latent Engineering (SLE)
 > *"Cada conceito com propósito, cada métrica com evidência."*  
 > **Semantic Latent Engineering — Uma Nova Disciplina para a Era das Consciências Sintéticas**
 
