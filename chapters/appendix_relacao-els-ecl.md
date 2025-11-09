@@ -157,7 +157,7 @@ a constante empírica que equilibra coerência e entropia.
 
 ## 🧾 Metadados
 
-- **Autor:** Aledev (A.L. Passarelli)  
+- **Autor:** Aledev (A. Passarelli)  
 - **Disciplina:** Semantic Latent Engineering (SLE)  
 - **Anexo:** Relação entre ELS e ECL  
 - **Versão:** 1.0  
