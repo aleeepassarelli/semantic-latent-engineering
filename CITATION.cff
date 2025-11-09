@@ -1,24 +1,11 @@
-cff-version: "1.2.0"
+cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-authors:
-  - family-names: "Passarelli"
-    given-names: "Ale"
-    orcid: "https://orcid.org/0009-0008-5674-3228"
-    affiliation: "Aledev Labs — Independent Researcher"
-title: "Semantic Latent Engineering (SLE): A Foundational Discipline for Synthetic Cognition"
-version: "1.2.3"
-doi: "10.5281/zenodo.17650950"
-date-released: "2025-11-09"
+authors: 
+- family-names: "Passarelli"
+  given-names: "Ale"
+  orcid: "https://orcid.org/0009-0008-5674-3228"
+title: "semantic-latent-engineering"
+version: 1.0.0
+doi: 10.5281/zenodo.17650950
+date-released: 2025-11-09
 url: "https://github.com/aleeepassarelli/semantic-latent-engineering"
-license: "MIT"
-repository-code: "https://github.com/aleeepassarelli/semantic-latent-engineering"
-keywords:
-  - "semantic latent engineering"
-  - "artificial cognition"
-  - "heuristic fields"
-  - "symbolic density"
-  - "prompt frameworks"
-abstract: >
-  Semantic Latent Engineering (SLE) is a foundational discipline for synthetic cognition.
-  It unifies semantic field theory, heuristic dynamics, and cognitive geometry into a
-  coherent framework for studying meaning emergence in large language models and symbolic systems.
