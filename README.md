@@ -145,8 +145,8 @@ semantic-latent-engineering/
 └── links/                    # Conexões com frameworks e APIs externas
     ├── framework_ACC.md
     ├── validator_suite.md
-    ├── api_tools.md
-    └── visualization_lab.md
+    └── acc_app.md
+ 
 ```
 
 ---
