@@ -186,10 +186,10 @@ semantic-latent-engineering/
 
 ## 📘 Créditos
 
-* **Autor Principal:** Aledev
-* [Colaboradores] {{COLLABORATORS}}
+* **Autor Principal:** ## Aledev
+
 * [GitHub](https://github.com/aleeepassarelli)
-* [Contato](al.passarelli@gmail.com))
+* [Contato](al.passarelli@gmail.com)
 
 ---
 
