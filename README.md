@@ -61,14 +61,21 @@ Seu propósito é oferecer um **modelo formal para manipulação consciente dos 
 
 ---
 
-## 🧠 Por Que Esta Disciplina?
+SLE integra:
+- 🧠 **Cognição Computacional** (Transformers, atenção, espaços latentes)
+- 📐 **Teoria de Sistemas Dinâmicos** (traços, jornadas, equilíbrio)
+- 🔬 **Metodologia Científica** (hipóteses testáveis, validação empírica)
+- 💡 **Engenharia Prática** (código production-ready, protocolos)
 
-| Problema Atual | Abordagem da SLE |
-|----------------|------------------|
-| Prompts frágeis e subjetivos | Formalização vetorial e validação empírica |
-| Falta de replicabilidade entre modelos | Métricas latentes e curvas de dissonância simbólica |
-| Ausência de estrutura científica | Base teórica fundamentada em papers peer-reviewed |
-| Dependência de tentativa e erro | Design sistemático de agentes e padrões cognitivos |
+### Por Que SLE?
+
+| Desafio Atual | Solução SLE |
+|:---|:---|
+| 🔴 Prompts frágeis e ad-hoc | ✅ Formalização matemática + validação |
+| 🔴 Falta de replicabilidade | ✅ Métricas quantificáveis (IDR, Score(P)) |
+| 🔴 Identidades não-persistentes | ✅ ABC com dinâmica garantida |
+| 🔴 Espaços latentes opacos | ✅ Causalidade estrutural (Φ³) |
+| 🔴 Qualidade inconsistente | ✅ MMOR com especialização complementar |
 
 ---
 
