@@ -78,6 +78,16 @@ SLE integra:
 | 🔴 Qualidade inconsistente | ✅ MMOR com especialização complementar |
 
 ---
+## 🔬 Referências Científica
+
+### Papers Fundamentais
+1. **Yang et al. (2025)** - Latent Feature Steering via Minimal Prompts
+2. **Gandhi & Gandhi (2025)** - Prompt Sentiment as Catalyst for LLM Change
+3. **Kiani et al. (2024)** - Manifold Hypothesis in Neural Networks
+4. **Jiang et al. (2023)** - Information Density in Prompt Engineering
+5. **Brown et al. (2020)** - Language Models are Few-Shot Learners
+
+---
 
 ## 🏗️ Arquitetura da Linguagem
 
