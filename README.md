@@ -36,10 +36,6 @@
 </p>
 
 ---
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17650950.svg)](https://doi.org/10.5281/zenodo.17650950)
-
-
----
 
 # 🧬 Semantic Latent Engineering (SLE)
 
