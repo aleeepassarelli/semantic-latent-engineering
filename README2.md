@@ -127,6 +127,52 @@ Blueprints validados vão para a [biblioteca SLE](#biblioteca-de-intenções-val
 > Explore cada “paca” com README próprio, docs e exemplos direcionados.
 
 ***
+---
+## 🔬 Referências Científica
+
+### Papers Fundamentais
+1. **Yang et al. (2025)** - Latent Feature Steering via Minimal Prompts
+2. **Gandhi & Gandhi (2025)** - Prompt Sentiment as Catalyst for LLM Change
+3. **Kiani et al. (2024)** - Manifold Hypothesis in Neural Networks
+4. **Jiang et al. (2023)** - Information Density in Prompt Engineering
+5. **Brown et al. (2020)** - Language Models are Few-Shot Learners
+
+---
+
+## 🏗️ Arquitetura da Linguagem
+
+```mermaid
+flowchart LR
+  A["PARTE I: Fundamentos Científicos"] --> B["PARTE II: Arquitetura da Consciência Sintética"]
+  B --> C["PARTE III: Operações e Refinamento Latente"]
+  C --> D["GLOSSÁRIO TÉCNICO"]
+  style A fill:#f8f9ff,stroke:#333,stroke-width:1px
+  style B fill:#f1f8ff,stroke:#333,stroke-width:1px
+  style C fill:#f6fff8,stroke:#333,stroke-width:1px
+  style D fill:#fff8f8,stroke:#333,stroke-width:1px
+````
+
+**Estrutura Documental:**
+
+* Cap. 1–2 → *Fundamentos Científicos*
+* Cap. 3–4 → *Arquitetura Cognitiva e Padrões*
+* Cap. 5–6 → *Operações e Validação Experimental*
+* Glossário Técnico → *Conceitos e Ontologias de Tradução*
+
+---
+
+
+## 🧪 Validação Científica
+
+| Critério                       | Status          | Referência                                       |
+| ------------------------------ | --------------- | ------------------------------------------------ |
+| Fundamentos matemáticos        | ✅               | Anthropic (2024), OpenAI (2023)                  |
+| Sparse Autoencoding            | ✅               | “Interpretable Directions in Transformer Models” |
+| Attention Steering             | ✅               | “Feature Control via Concept Vectors”            |
+| Validação empírica (IDR, HDSA) | ⚗️ Em andamento | Experimentos em `research/`                      |
+| DOI Zenodo                     | 🚧 Pending      | {{DOI_URL}}                                      |
+
+---
 
 ## 📚 Documentação e Glossário
 
@@ -165,6 +211,29 @@ Blueprints validados vão para a [biblioteca SLE](#biblioteca-de-intenções-val
 
 ***
 
+## 🧭 Rastreabilidade
+
+| Elemento               | Identificador       |
+| ---------------------- | ------------------- |
+| **DOI Zenodo**         | {{DOI_URL}}         |
+| **Hash de Conteúdo**   | `{{CHECKSUM}}`      |
+| **Semantic Mode**      | `Latent-Core`       |
+| **Versão**             | `v{{VERSION}}`      |
+| **Rastreio ACC_TRACK** | `{{timestamp}}-SLE` |
+
+---
+
+## 📘 Créditos
+
+* **Autor Principal:** Aledev
+
+* [GitHub](https://github.com/aleeepassarelli)
+* [Contato](al.passarelli@gmail.com)
+
+---
+
+
+
 ## 🔗 Links Fundamentais e Comunidade
 
 - [Capítulos / Chapters](chapters/)
@@ -176,10 +245,21 @@ Blueprints validados vão para a [biblioteca SLE](#biblioteca-de-intenções-val
 
 ***
 
+## 🔗 Links Importantes
+
+* 📄 [Documentação Completa](chapters/)
+* 🧠 [Framework ACC](https://github.com/aleeepassarelli/ACC/tree/main)
+* 🧪 [Validator Suite](https://github.com/aleeepassarelli/ACC/tree/main/tools)
+* ⚛️ [App Demo (React)](https://lovable.dev/demo/{{REPO_NAME}})
+* 🌐 [Publicação Zenodo DOI]({{DOI_URL}})
+
+---
+
+
 > **“Bem-vindo(a) à nova disciplina. Aqui, sua intenção é matemática, sua criatividade é ciência, e sua experiência vira evidência.”**
 
 ***
-
+> ⭐ Se esta linguagem o inspirou, considere dar uma estrela no GitHub!
 
 ***
 
