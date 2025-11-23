@@ -230,18 +230,6 @@ flowchart LR
 * [GitHub](https://github.com/aleeepassarelli)
 * [Contato](al.passarelli@gmail.com)
 
----
-
-
-
-## 🔗 Links Fundamentais e Comunidade
-
-- [Capítulos / Chapters](chapters/)
-- [Glossário Técnico](chapters/glossario-tecnico.md)
-- [Validator Suite/ACC Tools](https://github.com/aleeepassarelli/ACC/tree/main/tools)
-- [Demo App](https://lovable.dev/demo/{{REPO_NAME}})
-- [DOI / Zenodo](#) (em breve)
-- 
 
 ***
 
