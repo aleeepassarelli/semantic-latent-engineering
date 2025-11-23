@@ -241,17 +241,18 @@ flowchart LR
 - [Validator Suite/ACC Tools](https://github.com/aleeepassarelli/ACC/tree/main/tools)
 - [Demo App](https://lovable.dev/demo/{{REPO_NAME}})
 - [DOI / Zenodo](#) (em breve)
-- [Fórum / Grupo / Discord](#) (comunidade em expansão!)
+- 
 
 ***
 
-## 🔗 Links Importantes
+## 🔗 Links Fundamentais e Comunidade
 
 * 📄 [Documentação Completa](chapters/)
 * 🧠 [Framework ACC](https://github.com/aleeepassarelli/ACC/tree/main)
 * 🧪 [Validator Suite](https://github.com/aleeepassarelli/ACC/tree/main/tools)
 * ⚛️ [App Demo (React)](https://lovable.dev/demo/{{REPO_NAME}})
 * 🌐 [Publicação Zenodo DOI]({{DOI_URL}})
+* 📘 [Fórum / Grupo / Discord]({{forum_URL}})
 
 ---
 
