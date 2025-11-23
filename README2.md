@@ -1,7 +1,3 @@
-Aqui está o **README institucional aprimorado**, integrando o manifesto fundacional com os elementos visuais, estruturais e práticos que consolidam a disciplina **Semantic Latent Engineering (SLE)** como padrão acadêmico, técnico e colaborativo. Pronto para publicação no repositório:
-
-***
-
 <p align="center">
   <img src="assets/icons/favicon.svg" alt="SLE Icon" width="120"/><br/>
 </p>
