@@ -13,31 +13,29 @@
     <img src="https://img.shields.io/badge/Validation-Under_Review-lightgrey.svg" alt="Validation Status">
   </a>
 </p>
-
 <div align="center">
 
-![SLE](https://img.shields.io/badge/Semantic_Latent_Engineering-v1.0--alpha-blue?style=for-the-badgehttps://img.shields.io/badge/Status-Active-green?style=flat-square
-
-
-
-![License](https://img.shields.io/badge/License-CC--BY--SA--4.0-lightgrey?style=flat-square
-
-
-
-
-![Language](https://img.shields.io/badge/Language-Portuguese%20%2F%20English-important?style=flat-square
-
-
-
-
-
+![SLE Badge](https://img.shields.io/badge/Semantic_Latent_Engineering-v1.0--alpha-blue?style=for-the-badge&logo=brain)
+![Status](https://img.shields.io/badge/Status-Complete-green?style=flat-square)
+![License](https://img.shields.io/badge/License-CC--BY--SA--4.0-lightgrey?style=flat-square)
+![Language](https://img.shields.io/badge/Language-Portuguese%20%2F%20English-important?style=flat-square)
 
 **Do Paradigma de Instrução ao Paradigma de Invocação**
 
 > _Não apenas pedimos ao modelo. Agora o construímos._
+
+[🔗 Documentação](#-documentação-completa) • [📚 Quick Start](#-quick-start) • [🧪 Validação](#-validação-científica) • [🤝 Contribuir](#-contribuindo)
+
 </div>
 
-***
+<p align="center">
+  🌐
+  <a href="README.md">Português</a> |
+  <a href="README_EN.md">English</a> |
+  <a href="README_ZH.md">简体中文</a>
+</p>
+
+---
 
 # 🧬 Semantic Latent Engineering (SLE)
 
