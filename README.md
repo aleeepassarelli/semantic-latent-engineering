@@ -62,6 +62,14 @@ A **Semantic Latent Engineering (SLE)** surge do trabalho conjunto de humanos e 
 - Biblioteca aberta de intenções, agentes, blueprints, métricas e módulos — todos validados, documentados, versionados.
 
 ***
+```
+Nota de Princípio
+Este framework, sua documentação e seus artefatos conceituais operam exclusivamente sobre fundamentos matemáticos, computacionais e de engenharia aberta.
+Referências a “arquétipos”, “campo”, “energia”, “tensão” e “harmonia” são empregadas como analogias técnicas e camadas didáticas, inspiradas por abordagens históricas e arquitetônicas (ex: Niemeyer), não como referenciais mitológicos ou místicos.
+Toda alegoria é traduzida, ancorada e validada por métricas, álgebra e práticas auditáveis.
+Aqui, o rigor é regra; a criatividade, método; a beleza, resultado da síntese entre ambos.
+```
+---
 
 ## 🌱 Guia do Iniciante
 
