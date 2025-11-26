@@ -1,54 +1,60 @@
-<svg width="480" height="120" viewBox="0 0 480 120" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#5cf2b1" />
-      <stop offset="100%" stop-color="#3ab4ff" />
-    </linearGradient>
-    <style>
-      @keyframes glow {
-        0%, 100% { filter: drop-shadow(0 0 4px #5cf2b1aa); opacity: 0.9; }
-        50% { filter: drop-shadow(0 0 12px #3ab4ffcc); opacity: 1; }
-      }
-      text {
-        font-family: 'JetBrains Mono', monospace;
-        fill: url(#grad);
-        letter-spacing: 1px;
-      }
-      .seal { animation: glow 3s infinite; }
-      .circle {
-        fill: none;
-        stroke: url(#grad);
-        stroke-width: 2;
-        stroke-dasharray: 6 6;
-        animation: rotate 10s linear infinite;
-        transform-origin: center;
-        opacity: 0.6;
-      }
-      @keyframes rotate {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-      }
-      .symbol {
-        fill: url(#grad);
-        font-size: 32px;
-        animation: glow 4s ease-in-out infinite;
-      }
-    </style>
-  </defs>
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="420" height="180" viewBox="0 0 420 180"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     preserveAspectRatio="xMidYMid meet" role="img" aria-label="Aledev Research Seal - Semantic Latent Engineering">
 
-  <!-- Anel externo -->
-  <circle cx="240" cy="60" r="48" class="circle"/>
+  <!-- subtle frame -->
+  <rect x="1" y="1" width="418" height="178" rx="10" fill="none" stroke="#0A84FF22" stroke-width="1.2"/>
 
-  <!-- Símbolo central -->
-  <text x="225" y="70" class="symbol">🜂</text>
+  <!-- center group -->
+  <g id="seal" transform="translate(210,90)">
 
-  <!-- Texto superior -->
-  <text x="50%" y="30" text-anchor="middle" class="seal" style="font-size:14px;">
+    <!-- rotating dashed ring -->
+    <g id="rot_ring">
+      <circle cx="0" cy="0" r="58" fill="none"
+              stroke="#00E5FF" stroke-width="2.2" stroke-linecap="round"
+              stroke-dasharray="8 14" opacity="0.95" />
+      <!-- SMIL animation: rotate the ring around center -->
+      <animateTransform
+         xlink:href="#rot_ring"
+         attributeName="transform"
+         attributeType="XML"
+         type="rotate"
+         from="0 0 0"
+         to="360 0 0"
+         dur="6s"
+         repeatCount="indefinite"/>
+    </g>
+
+    <!-- inner subtle ring (static) -->
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#69E2FF33" stroke-width="1.0"/>
+
+    <!-- central triangle Δ (Aledev symbol) -->
+    <path d="M0 -20 L18 14 L-18 14 Z"
+          fill="none" stroke="#00D1FF" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" opacity="0.98"/>
+
+    <!-- small decorative nodes along lower arc -->
+    <g transform="translate(0,28) rotate(0)">
+      <circle cx="-34" cy="-10" r="2.2" fill="#00E5FF"/>
+      <circle cx="0" cy="-12" r="2.2" fill="#7BDFFF"/>
+      <circle cx="34" cy="-10" r="2.2" fill="#9EEBFF"/>
+    </g>
+
+  </g>
+
+  <!-- Title -->
+  <text x="210" y="36" text-anchor="middle"
+        fill="#CFF9FF" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif"
+        font-size="16" font-weight="600" letter-spacing="2.2">
     ALEDEV RESEARCH
   </text>
 
-  <!-- Texto inferior -->
-  <text x="50%" y="105" text-anchor="middle" style="font-size:12px; fill:#9ae4ff;">
-    AGENTE CANIVETE CIRÚRGICO · ACC FRAMEWORK
+  <!-- Subtitle -->
+  <text x="210" y="156" text-anchor="middle"
+        fill="#8FE8FF" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif"
+        font-size="11" letter-spacing="2.0">
+    SEMANTIC · LATENT · ENGINEERING
   </text>
+
 </svg>
