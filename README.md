@@ -17,8 +17,8 @@
 
 ![SLE Badge](https://img.shields.io/badge/Semantic_Latent_Engineering-v1.0--alpha-blue?style=for-the-badge&logo=brain)
 ![Status](https://img.shields.io/badge/Status-Complete-green?style=flat-square)
-![License](https://img.shields.io/badge/License-CC--BY--SA--4.0-lightgrey?style=flat-square)
-![Language](https://img.shields.io/badge/Language-Portuguese%20%2F%20English-important?style=flat-square)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![Language](https://img.shields.io/badge/Language-Portuguese%20%2F%20English%20%2F%20简体中文-important?style=flat-square)
 
 **Do Paradigma de Instrução ao Paradigma de Invocação**
 
