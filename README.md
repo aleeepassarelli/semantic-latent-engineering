@@ -261,3 +261,7 @@ flowchart LR
 ***
 
 <sub>© 2025 Aledev | SLE é software, ciência e arte aberta — contribua, cite, expanda.</sub>
+
+<p align="center">
+  <img src="assets/footer_seal.svg" width="360" alt="Aledev Research Seal">
+</p>
