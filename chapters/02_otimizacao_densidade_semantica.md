@@ -224,7 +224,34 @@ Este capítulo apresentou quatro técnicas fundamentais da Engenharia Latente:
 3.  **MSLR:** Refinamento composto.
 4.  **Mapeamento Arquetípico:** Compressão simbólica.
 
-Essas ferramentas permitem manipular a "Física" (Cap 1) para construir arquiteturas cognitivas robustas.
+----
 
+Átomo de Contexto
+
+```mermaid
+graph TD
+    Input[Input Natural / Verbose] -->|Ingestão| Engine{Engine de Otimização}
+
+    subgraph "Técnicas de Compressão (A Química)"
+        Engine -->|Destilação| HDSA[HDSA: Âncoras Semânticas]
+        Engine -->|Estabilidade| CRAS[CRAS: Sinal de Re-Ancoragem]
+        Engine -->|Refinamento| MSLR[MSLR: Multi-Stage Pipeline]
+        Engine -->|Simbolismo| Arch[Mapeamento Arquetípico]
+    end
+
+    HDSA -->|Converge| ACC(ACC: Atomic Context Context)
+    CRAS -->|Sustenta| ACC
+    MSLR -->|Polimento| ACC
+    Arch -->|Comprime| ACC
+
+    ACC -->|Validation Gate| Check{SD > 0.8?}
+    Check -->|Sim| Deploy[🚀 Deploy no Espaço Latente]
+    Check -->|Não| Loop[♻️ Re-Otimizar]
+    Loop -.-> Engine
+
+    style Input fill:#333,stroke:#666,color:#fff
+    style ACC fill:#00a3b8,stroke:#fff,stroke-width:3px,color:#000
+    style Check fill:#8a2be2,stroke:#fff,stroke-width:2px
+    style Deploy fill:#2ea44f,stroke:#fff
 ```
-
+----
