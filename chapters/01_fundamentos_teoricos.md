@@ -146,6 +146,7 @@ Este capítulo estabelece que a SLE não é sobre palavras. É sobre:
 
 🎨 O Diagrama de Campo
 
+```mermaid
 graph LR
     subgraph "Espaço Latente (Campo L)"
         S_t((Estado Atual S_t))
