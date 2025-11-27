@@ -239,7 +239,7 @@ graph TD
         Engine -->|Simbolismo| Arch[Mapeamento Arquetípico]
     end
 
-    HDSA -->|Converge| ACC(ACC: Atomic Context Context)
+    HDSA -->|Converge| ACC(ACC: Agente canivete cirúrgico)
     CRAS -->|Sustenta| ACC
     MSLR -->|Polimento| ACC
     Arch -->|Comprime| ACC
