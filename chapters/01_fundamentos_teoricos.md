@@ -148,13 +148,13 @@ Este capítulo estabelece que a SLE não é sobre palavras. É sobre:
 
 ```mermaid
 graph LR
-    subgraph "Espaço Latente (Campo L)"
+    subgraph "Espaco Latente (Campo L)"
         S_t((Estado Atual S_t))
         I_L[("Intenção (Atrator)")]
-        
-        S_t -->|Gravidade P(I)| I_L
-        S_t -.->|Entropia/Ruído| Drift(Dispersão)
-        
+
+        S_t -->|"Gravidade P(I)"| I_L
+        S_t -.->|Entropia/Ruido| Drift(Dispersão)
+
         style I_L fill:#00a3b8,stroke:#fff,stroke-width:2px
         style S_t fill:#0d1117,stroke:#fff,stroke-width:2px
     end
@@ -163,12 +163,13 @@ graph LR
         T[Tensionadores] -->|Modula| I_L
         R[Respiração Fractal] -->|Modula| S_t
         Omega{Contrato Omega} -->|Bloqueia| Drift
-        
+
         style Omega fill:#8a2be2,stroke:#fff,stroke-width:2px
     end
 
-    classDef physics fill:#222,stroke:#666,color:#fff;
+    classDef physics fill:#222,stroke:#666,color:#fff
     class Drift physics
 
+```
 
-    ---
+----
