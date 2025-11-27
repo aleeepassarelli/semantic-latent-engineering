@@ -82,7 +82,8 @@ def validate_cpp_attention(prompt, mode_trigger, model):
 ```
 4.6 Guia de Decisão: Quando usar CPPs?
 ----
-```
+
+```mermaid
 graph TD
     A[Objetivo da Tarefa?] -->|Criar Novo| B(CPP-3: Gerativo)
     A -->|Corrigir/Validar| C(CPP-1: Introspectivo)
