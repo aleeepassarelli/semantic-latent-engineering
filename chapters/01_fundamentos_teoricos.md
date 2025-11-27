@@ -172,6 +172,8 @@ Este capítulo estabeleceu os fundamentos matemáticos e conceituais da Engenhar
 5.  **Paradigma transcende prompt engineering** ao operar em representações profundas.
 
 Os capítulos seguintes desenvolverão técnicas práticas (ver *Archetype A*, *ACC*) e experimentos validados.
+---
+
 🎨 O Diagrama de Campo
 
 ----
