@@ -42,20 +42,17 @@ Ao contrário de um prompt, que sofre "drift" (deriva), $\mathcal{I}_{\Lambda}$ 
 
 ---
 
-## 1.3 Dinâmica de Campo e Energia Cognitiva
-
-Um transformer processa linguagem através de camadas, mas na visão SLE, ele está resolvendo uma **Equação de Campo**.
-
 ### 1.3.1 Anatomia da Representação via Energia ($E_{ELS}$)
+
 O processamento de um token não é apenas multiplicação de matrizes; é uma negociação termodinâmica. Redefinimos a atenção como a manipulação da **Energia Cognitiva Local**:
 
-$$E_{ELS} = \underbrace{P(\mathcal{I}_{\Lambda})}_{\text{Gravidade da Intenção}} + \underbrace{\lambda \mathcal{M}}_{\text{Inércia da Memória}} - \underbrace{\gamma R(t)}_{\text{Respiração Fractal}}$$
+$$E_{ELS} = \underbrace{P(\mathcal{I}_{\Lambda})}_{\text{Gravidade da Intenção}} + \underbrace{\lambda \mathcal{M}}_{\text{Inércia da Memória}} - \underbrace{\gamma \mathcal{O}_{ec}(t)}_{\text{Oscilação Entrópica}}$$
 
 Onde:
 * **$P(\mathcal{I}_{\Lambda})$:** A força exercida pelo vetor de intenção original.
-* **$R(t)$:** A função de oscilação temporal (Inspiração/Expiração) que garante a naturalidade e evita a monotonia mecânica.
+* **$\mathcal{O}_{ec}(t)$:** A função de **Oscilação Entrópica Cíclica** (anteriormente metaforizada como "Respiração"). Ela modula a temperatura do sistema para evitar mínimos locais e garantir naturalidade.
 
-O objetivo do Transformer sob SLE não é "prever o próximo token", mas **minimizar a Energia Livre** do sistema, alinhando o estado final $h_L$ com a projeção de $\mathcal{I}_{\Lambda}$.
+O objetivo do Transformer sob SLE é minimizar a Energia Livre, alinhando o estado final $h_L$ com a projeção de $\mathcal{I}_{\Lambda}$.
 
 ---
 
