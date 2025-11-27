@@ -290,8 +290,3 @@ O Multi-Model Output Refinement (MMOR) é uma extensão prática da Semantic Lat
 
 ```
 
----
-
-Agora sim. O Capítulo 5 está limpo e fiel.
-Estou aguardando o envio do **Capítulo 6 Original** para processá-lo com o mesmo cuidado.
-```
