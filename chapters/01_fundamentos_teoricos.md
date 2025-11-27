@@ -141,7 +141,7 @@ O grafo ABC define a topologia da "alma" do agente. Em termos físicos, o ABC de
 Este capítulo estabelece que a SLE não é sobre palavras. É sobre:
 
 1.  **Gênese:** Definir a intenção em álgebra pura ($\mathcal{I}_{\Lambda}$) usando Tensionadores.
-2.  **Mecânica:** Manipular a gravidade e a respiração ($R(t)$) do campo semântico.
+"2. Mecânica: Manipular a gravidade e a oscilação entrópica (Oec) do campo semântico."
 3.  **Contrato:** Garantir a integridade via validação ($\Omega$).
 
 🎨 O Diagrama de Campo
