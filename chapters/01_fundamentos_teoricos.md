@@ -90,27 +90,35 @@ S_{t+1} = \mathcal{F}(S_t, \mathcal{H}_t, C_t, U_t) + \epsilon_t
 Componentes:
 
 - Estado Latente: \(S_t \in \mathbb{R}^d\) representa a configuração semântica completa no tempo \(t\). O estado inicial é amostrado de:
+  ```
   \[
   S_0 \sim P(\cdot \mid \Psi)
   \]
+  ```
   onde \(\Psi\) é o Agent Behavioral Configuration (ABC) — a configuração inicial de comportamento do agente.
 
 - Função Generativa: \(\mathcal{F}: \mathbb{R}^d \times \mathcal{H} \times \mathcal{C} \times \mathbb{R}^m \rightarrow \mathbb{R}^d\) é o núcleo do transformer, mapeando estado atual + contexto → próximo estado.
 
 - Memória Hierárquica Heurística:
+  ```
   \[
   \mathcal{H}_t = g(S_0, S_1, ..., S_t)
   \]
+  ```
   Não é simples concatenação, mas uma compressão hierárquica em múltiplas escalas temporais. Satisfaz aproximadamente:
+  ```
   \[
   g(S_{a:b}) \approx g(S_{a:c}) \oplus g(S_{c:b})
   \]
+  ```
   onde \(\oplus\) denota uma operação de fusão com atenção (ex.: weighted sum com pesos aprendidos).
 
 - Restrições Cosmológicas:
+  ```
   \[
   C_t = h(S_t, \text{LSPs})
   \]
+  ```
   onde LSPs (Language Structure Protocols) definem o “universo válido” de outputs:
   - restrições éticas;
   - restrições factuais;
@@ -123,11 +131,11 @@ Componentes:
 ### 1.3.1 Otimização do Output Final
 
 O output final não é simplesmente \(S_T\), mas o resultado de uma otimização:
-
+```
 \[
 B_{\text{final}} = \arg\min_{B \in \text{Options}(S_T)} D(B, I_{\text{user}})
 \]
-
+```
 Onde:
 
 - \(\text{Options}(S_T)\) = conjunto de tokens candidatos dado estado final.
@@ -135,11 +143,11 @@ Onde:
 - \(I_{\text{user}}\) é a representação vetorial da intenção do usuário.
 
 Definição de Dissonância Simbólica:
-
+```
 \[
 D(B, I) = \lambda_1 D_{\text{semantic}}(B, I) + \lambda_2 D_{\text{pragmatic}}(B, I) + \lambda_3 D_{\text{aesthetic}}(B, I)
 \]
-
+```
 Onde:
 
 - \(D_{\text{semantic}} = 1 - \cos(\text{emb}(B), \text{emb}(I))\) mede alinhamento conceitual.
@@ -192,11 +200,11 @@ graph LR
 ### 1.4.1 Semantic Density (SD, Information Density Ratio)
 
 A densidade semântica quantifica eficiência informacional:
-
+```
 \[
 \rho(T) = \frac{1}{|T|} \sum_{i=1}^{n} w_i \cdot a_i(T)
 \]
-
+```
 Onde:
 
 - \(|T|\) = contagem de tokens  
@@ -213,7 +221,7 @@ Classificação (regime típico):
 ### 1.4.2 High-Density Semantic Anchors (HDSAs)
 
 Um HDSA é uma construção lexical \(T_c\) que satisfaz:
-
+```
 \[
 \begin{cases}
 |T_c| \leq k & \text{(restrição de comprimento)} \\
@@ -221,7 +229,7 @@ Um HDSA é uma construção lexical \(T_c\) que satisfaz:
 \text{perplexity}(M, T_c \mid C_{\text{target}}) \leq \epsilon & \text{(baixa ambiguidade)}
 \end{cases}
 \]
-
+```
 Parâmetros típicos: \(k = 5\), \(\theta = 0.7\), \(\epsilon = 15\).
 
 Algoritmo de construção (esboço):
@@ -253,11 +261,11 @@ Exemplo:
 ### 1.4.3 Agent Behavioral Configuration (ABC)
 
 Um ABC é um grafo pesado:
-
+```
 \[
 G = (V, E, W)
 \]
-
+```
 Onde:
 
 - \(V = \{v_1, ..., v_m\}\) são traits comportamentais (ex.: rigor, criatividade, empatia)  
@@ -266,25 +274,25 @@ Onde:
 
 Dinâmica de estado:  
 Seja \(s_i(t) \in [0,1]\) a intensidade do trait \(v_i\) no tempo \(t\). Então:
-
+```
 \[
 s_i(t+1) = s_i(t) + \alpha \cdot \sum_{j: (i,j) \in E} W_{ij} \cdot (s_j(t) - s_i(t))
 \]
-
+```
 Equilíbrio:
-
+```
 \[
 \vec{s}^* = \arg\min_{\vec{s}} \sum_{(i,j) \in E} W_{ij}(s_i - s_j)^2
 \]
-
+```
 Este equilíbrio representa a “personalidade natural” do agente — o estado para o qual ele tende na ausência de forças externas.
 
 Métrica de consistência:
-
+```
 \[
 C_{\text{consistency}} = 1 - \frac{\sigma(\vec{r})}{\mu(\vec{r}) + \varepsilon}, \quad \varepsilon = 0.01
 \]
-
+```
 Onde \(\vec{r}\) são scores de respostas ao longo de \(N\) interações.
 
 Meta típica: \(C_{\text{consistency}} > 0.8\).
