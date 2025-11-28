@@ -27,11 +27,11 @@ A Semantic Latent Engineering (SLE) não substitui os paradigmas anteriores — 
 ### 1.2.1 Anatomia da Representação
 
 Um transformer processa linguagem através de múltiplas camadas de transformação:
-
+```
 \[
 \text{Input tokens} \xrightarrow{\text{Embedding}} \vec{e} \in \mathbb{R}^{d} \xrightarrow{\text{Layers}} \vec{h}_L \in \mathbb{R}^{d} \xrightarrow{\text{Projection}} \text{Output}
 \]
-
+```
 Onde:
 
 - \(d\) = dimensionalidade do espaço latente (tipicamente 768–12288)
@@ -39,33 +39,33 @@ Onde:
 - \(\vec{h}_L\) = representação final após \(L\) camadas (saída da última camada de atenção)
 
 Cada camada aplica:
-
+```
 \[
 \vec{h}_{l+1} = \text{FFN}(\text{Attention}(\vec{h}_l))
 \]
-
+```
 O mecanismo de atenção computa:
-
+```
 \[
 \text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V
 \]
-
+```
 Conceito-chave: o espaço latente não é um espaço opaco. Pesquisas recentes mostram que podemos decompor \(\vec{h}\) em concept vectors interpretáveis usando sparse autoencoders.
 
 ### 1.2.2 Concept Vectors e Semantic Steering
 
 Um concept vector \(\vec{c}_i\) representa uma “direção semântica” específica no espaço latente. Por exemplo:
-
+```
 \[
 \vec{c}_{\text{programming}} \approx \alpha_1\vec{h}_{\text{"code"}} + \alpha_2\vec{h}_{\text{"function"}} + \alpha_3\vec{h}_{\text{"algorithm"}}
 \]
-
+```
 Steering consiste em adicionar ou subtrair concept vectors:
-
+```
 \[
 \vec{h}'_l = \vec{h}_l + \beta \cdot \vec{c}_{\text{target}}
 \]
-
+```
 Onde \(\beta\) controla a intensidade do steering.
 
 Evidência empírica: projeções de embeddings mostram separação clara entre clusters semânticos de prompts afetivos e funcionais.
@@ -82,11 +82,11 @@ Implicação: podemos intencionalmente ativar clusters específicos através da 
 ## 1.3 Modelo Formal de Interação com Memória Hierárquica
 
 Diferentemente de modelos lineares de input–output, propomos um modelo de sistemas dinâmicos estocásticos para interação humano–LLM:
-
+```
 \[
 S_{t+1} = \mathcal{F}(S_t, \mathcal{H}_t, C_t, U_t) + \epsilon_t
 \]
-
+```
 Componentes:
 
 - Estado Latente: \(S_t \in \mathbb{R}^d\) representa a configuração semântica completa no tempo \(t\). O estado inicial é amostrado de:
