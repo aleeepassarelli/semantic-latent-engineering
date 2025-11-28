@@ -233,3 +233,155 @@ Cada experimento segue o padrão:
 Total: ~13 semanas (~3 meses de ciclo experimental focado).
 
 ---
+
+## 6.3 Limitações Reconhecidas
+
+### 6.3.1 Limitações de Escopo
+
+- Unimodalidade:
+  - Framework atual é textual.
+  - Futuro: estender SD, ABC, CPP e MMOR para multimodal (imagem, áudio, vídeo).
+
+- Foco em Prompt Engineering:
+  - Atua majoritariamente via linguagem natural.
+  - Futuro: integrar steering vetorial direto (SAEs, intervenções em hidden states) em modelos open‑source.
+
+- Validação Pública:
+  - Você já tem testes internos (colab, contexto limpo).
+  - Mas ainda não há dataset público (≥ 100 prompts) com protocolo reprodutível.
+  - Por isso o texto corretamente mantém “validação empírica pendente”.
+
+### 6.3.2 Limitações Técnicas
+
+- Dependência de APIs comerciais:
+  - Limita experimentos profundos de interpretabilidade.
+  - Mitigação: uso crescente de LLaMA, Mistral etc. com acesso a attention/hidden states.
+
+- Caixa‑preta:
+  - Modelos fechados mantêm internals inacessíveis.
+  - Postura SLE: tratar como caixa‑preta prática, mas manter programa de abertura com open‑weights.
+
+- Replicabilidade:
+  - Versões de modelo mudam sem aviso.
+  - Mitigação: registrar versões exatas, seeds e configurações.
+
+### 6.3.3 Limitações Metodológicas
+
+- Métricas:
+  - Qualidade é multidimensional (fato, coerência, estilo, segurança).
+  - Mitigação: usar conjunto de métricas automáticas + avaliação humana cega.
+
+- Viés de Confirmação:
+  - Risco de ver o que se deseja ver nos experimentos.
+  - Mitigação: pré‑registro de hipóteses, revisão externa, datasets públicos.
+
+- Generalização:
+  - Resultados iniciais podem ser sensíveis ao domínio (ex.: tech, filosofia).
+  - Postura: explicitar limites de escopo em cada estudo.
+
+---
+
+## 6.4 Considerações Éticas Específicas
+
+### 6.4.1 Vieses em HDSAs
+
+- Risco: HDSAs como “Líder Nato” podem embutir vieses de gênero, raça, classe.
+- Mitigações:
+  - revisão por pessoas de contextos diversos;
+  - uso de ferramentas de bias detection;
+  - documentação de limitações culturais de cada HDSA.
+
+### 6.4.2 Manipulação via ABCs
+
+- Risco: ABCs orientados só a persuasão podem manipular usuários (ex.: “Vendedor que induz urgência irracional”).
+- Mitigações:
+  - transparência: deixar claro que é um agente configurado;
+  - auditorias éticas para domínios sensíveis (saúde, finanças);
+  - limites de uso para certos ABCs.
+
+### 6.4.3 Opacidade de MMOR
+
+- Risco: usuário acha que fala com “um modelo”, mas na verdade há pipeline multi‑modelo.
+- Pergunta: quem é responsável pelo output?
+- Mitigações:
+  - indicar explicitamente quando MMOR está ativo;
+  - atribuir responsabilidade de decisão (ex.: modelo final do pipeline);
+  - logging completo de todos os estágios;
+  - permitir ao usuário escolher entre single model ou pipeline.
+
+---
+
+## 6.5 Direções Futuras
+
+### 6.5.1 Integração com Sparse Autoencoders (SAEs)
+
+- Visão:
+  - sair do priming puramente textual;
+  - entrar em steering vetorial: mexer diretamente em concept vectors.
+- Plano:
+  - treinar SAEs em modelos open‑weight;
+  - mapear conceitos (HDSAs, ABC traits) para direções latentes;
+  - comparar eficácia: CPP textual vs steering vetorial.
+
+### 6.5.2 Extensão Multimodal
+
+- Objetivo:
+  - levar SLE para imagens, áudio, vídeo.
+- Passos:
+  - definir SD multimodal;
+  - HDSAs visuais (ícones, composições prototípicas);
+  - ABCs para agentes multimodais (ex.: tutor que combina texto + imagem);
+  - CPPs cross‑modal (como o modo cognitivo afeta escolhas visuais).
+
+### 6.5.3 SLE em Modelos Open-Source
+
+- Objetivo:
+  - reduzir dependência de APIs fechadas;
+  - democratizar a engenharia latente.
+- Plano:
+  - implementar ABC/CPP/SD em LLaMA/Mistral;
+  - expor APIs de interpretabilidade (attention, activations);
+  - replicar E1–E5 em ambiente totalmente aberto.
+
+### 6.5.4 Aplicações em Educação
+
+- Ideia:
+  - usar ABCs para criar tutores com estilos claros:
+    - “Professor Socrático” (perguntas, não respostas);
+    - “Mentor Técnico” (claridade brutal);
+    - “Coach Criativo” (exploração).
+- Validação:
+  - medir aprendizado real de estudantes;
+  - comparar SLE‑tutor vs tutor genérico.
+
+---
+
+## 6.6 Conclusão Final
+
+A Semantic Latent Engineering propõe uma transição:
+
+- de “prompt engineering mágico”,
+- para uma arquitetura de significados com:
+
+  - conceitos formais (SD, ABC, ELS/ECL),
+  - design patterns (HDSA, CPP, MMOR),
+  - métricas e protocolos de teste,
+  - cuidado ético explícito.
+
+Contribuições centrais:
+
+1. Formalização de densidade semântica e identidade computacional de agentes.  
+2. Design patterns reprodutíveis para comprimir significado, configurar agentes e orquestrar modelos.  
+3. Protocolo de validação com hipóteses claras (E1–E5), não só narrativas.  
+4. Integração entre rigor técnico e respeito às dimensões éticas e estéticas do fenômeno.
+
+Status:
+
+- teoria e arquitetura: em versão 1.0, coerente e bem documentada;  
+- evidências internas: já existem, mas não padronizadas em dataset público;  
+- validação empírica: declaradamente pendente e planejada.
+
+No espírito da própria SLE:
+
+> Este trabalho não é um oráculo pronto, mas um convite a experimentar, refutar, refinar e criar junto — com humanos, com IAs, e com tudo que ainda vai emergir desses campos de linguagem.
+
