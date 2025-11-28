@@ -117,7 +117,7 @@ Blueprints validados vão para a [biblioteca SLE](#biblioteca-de-intenções-val
 
 ## 🗂️ Mapa do Ecossistema
 
-> **O SLE distribui-se em +25 repositórios (“pacas”), crescendo sempre. Todos ancorados aqui.**
+> **O SLE distribui-se em +10 repositórios (“pacas”), crescendo sempre. Todos ancorados aqui.**
 
 | Nome / Link | Objetivo / Ênfase | Exemplos de Uso |
 |---|---------------------------|-----------------|
