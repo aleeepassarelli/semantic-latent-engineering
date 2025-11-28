@@ -162,7 +162,7 @@ Fenômenos explicados:
 
 🎨 O Diagrama de Campo
 
-```
+```mermaid
 graph LR
     subgraph "Espaco Latente (Campo L)"
         S_t((Estado Atual S_t))
