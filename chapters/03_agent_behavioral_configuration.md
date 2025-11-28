@@ -202,6 +202,227 @@ Esses operadores permitem avaliar se um mediador é:
 \mathcal{G}_{NMG} = (V, E), \quad E = \{(i,j) \mid \Delta\omega_{ij} > \theta\}
 \]
 ```
-A partir disso, Φ³ passa a ser uma camada plugável ao ABC: além de saber “quem o agente é” (G, C, U), passamos a saber “quais circuitos internos são responsáveis” por um determinado padrão de resposta.
+
+## 3.4 Score(P): Métrica Causalmente Explícita
+
+### 3.4.1 Fórmula Consolidada com Φ³
+
+O Score(P) é definido como:
+```
+\[
+\text{Score}(P) = 
+\underbrace{\sum_{i \in \mathcal{G}_{NMG}} \Delta\omega_i \cdot \kappa_i}_{\text{Contribuição Causal}} \cdot
+\underbrace{\left(\frac{\Delta S_D + \varepsilon}{\Delta S_H}\right)}_{\text{Ganho Informacional}} \cdot
+\underbrace{I[\mathcal{V}_{CE} = 1]}_{\text{Validação Estrutural}}
+\]
+```
+Componentes:
+
+- \(\Delta\omega_i\): contribuição causal mediada do mediador \(i\).  
+- \(\kappa_i\): fidelidade da cadeia causal associada ao mediador \(i\).  
+- \(\Delta S_D\): ganho de densidade semântica (SD) entre baseline e versão refinada.  
+- \(\Delta S_H\): redução de entropia contrafactual.  
+- \(\varepsilon\): termo de estabilidade numérica.  
+- \(I[\mathcal{V}_{CE} = 1]\): indicador (0/1) de que o mediador passou verificação de edição causal.
+
+Score(P) é normalizado em \([0,1]\) via clipping.
+
+### 3.4.2 Propriedades
+
+- Se todos \(\kappa_i \to 1\) e \(\mathcal{V}_{CE} = 1\), Score(P) é maximizado.  
+- Score(P) decai quando mediadores são frágeis, espúrios ou não validados.  
+- Cada termo é rastreável a partes específicas da arquitetura (heads, MLPs, etc.).
 
 ---
+
+## 3.5 Critérios de Validação Empírica (EAT‑REx 036–040)
+
+Para Φ³ ser considerada confiável:
+
+- Reprodutibilidade inter‑modelo: Score(P) estável em diferentes LLMs (σ < 5%).  
+- Invariância à semente: \(\Delta\omega_i\) e \(\kappa_i\) variam pouco com seeds.  
+- Validação humana: especialistas reconhecem os circuitos como plausíveis (≥ 80% acordo).  
+- Generalização de tarefa: mesmo mediador funciona em múltiplos prompts da mesma classe.  
+- Robustez a ruído: Score(P) degrada suavemente com input ruidoso.
+
+---
+
+## 3.6 Exemplo Prático: “Engenheiro Estoico” com Φ³
+
+### 3.6.1 Configuração ABC
+
+- Traços (\(V, \vec{s}(0)\)):  
+  Rigor = 0.9, Filosofia = 0.8, Crítica = 0.85, Empatia = 0.4.  
+- Relações (E, W):  
+  Rigor–Criatividade: +0.3; Rigor–Hype: −0.7.  
+- Ciclo (C):  
+  Análise → Debate → Reflexão → Decisão → Síntese.  
+- Vocabulário (U):  
+  “bigorna” (0.8), “martelo” (0.7), “bússola” (0.6).
+
+### 3.6.2 Circuito Causal Exemplo
+
+Tarefa: responder criticamente a uma afirmação técnica fraca.
+
+Circuito:
+
+- Head 7.3: atenção a contradições lógicas (\(\kappa \approx 0.92\)).  
+- MLP 8.2: codifica padrão “non‑sequitur” (\(\Delta\omega \approx 0.15\)).  
+- Edição causal (ROME) em MLP 8.2 confirma suficiência (\(\mathcal{V}_{CE}=1\)).
+
+Score(P) resultante é moderadamente alto (ex.: ≈ 0.6), indicando explicabilidade razoável do comportamento crítico.
+
+---
+
+## 3.7 Implementação Algorítmica (ABC com Φ³)
+
+```
+import numpy as np
+from scipy.spatial.distance import cosine
+from typing import Dict, List, Tuple
+
+class ABCWithCausality:
+    """
+    Agent Behavioral Configuration integrado com Causalidade Estrutural (Φ³).
+    """
+
+    def __init__(self,
+                 traits: Dict[str, float],
+                 relations: Dict[Tuple[str, str], float],
+                 journey_states: List[str],
+                 symbols: Dict[str, float] = None):
+        """
+        traits: {'rigor': 0.9, 'creativity': 0.6, ...}
+        relations: {('rigor', 'creativity'): 0.3, ('rigor', 'hype'): -0.7, ...}
+        journey_states: ['Analysis', 'Debate', 'Reflection', 'Decision', 'Synthesis']
+        symbols: {'bigorna': 0.8, 'bussola': 0.6, ...}
+        """
+        self.traits = traits.copy()
+        self.relations = relations
+        self.journey_states = journey_states
+        self.symbols = symbols or {}
+
+        self.current_state = traits.copy()
+        self.current_journey_idx = 0
+
+        # mediadores causais: {id: {'kappa': ..., 'delta_omega': ..., 'delta_s_h': ..., 'v_ce': ...}}
+        self.causal_mediators = {}
+
+    def update_behavioral_state(self, alpha: float = 0.1) -> Dict[str, float]:
+        """Difusão laplaciana no grafo G."""
+        new_state = self.current_state.copy()
+        for (i, j), w in self.relations.items():
+            if i in new_state and j in new_state:
+                delta = alpha * w * (self.current_state[j] - self.current_state[i])
+                new_state[i] = np.clip(new_state[i] + delta, 0.0, 1.0)
+        self.current_state = new_state
+        return self.current_state
+
+    def progress_journey(self, event: str) -> str:
+        """Avança o ciclo cognitivo (simplificado)."""
+        if self.current_journey_idx < len(self.journey_states) - 1:
+            self.current_journey_idx += 1
+        return self.journey_states[self.current_journey_idx]
+
+    def get_active_symbols(self, context: str) -> float:
+        """Peso total de símbolos ativados pelo contexto."""
+        w = 0.0
+        for symbol, weight in self.symbols.items():
+            if symbol.lower() in context.lower():
+                w += weight
+        return float(np.clip(w, 0.0, 1.0))
+
+    def register_causal_mediator(self,
+                                 mediator_id: str,
+                                 kappa: float,
+                                 delta_omega: float,
+                                 delta_s_h: float,
+                                 v_ce: int):
+        """Registra mediador causal com métricas Φ³ básicas."""
+        self.causal_mediators[mediator_id] = {
+            "kappa": kappa,
+            "delta_omega": delta_omega,
+            "delta_s_h": delta_s_h,
+            "v_ce": v_ce,
+        }
+
+    def compute_score_p(self, delta_s_d: float = 0.12, epsilon: float = 0.01) -> float:
+        """Calcula Score(P) conforme a fórmula consolidada."""
+        if not self.causal_mediators:
+            return 0.0
+
+        contribution = 0.0
+        delta_s_h_vals = []
+
+        for m in self.causal_mediators.values():
+            if m["v_ce"] == 1:
+                contribution += m["delta_omega"] * m["kappa"]
+                delta_s_h_vals.append(m["delta_s_h"])
+
+        if not delta_s_h_vals:
+            return 0.0
+
+        avg_delta_s_h = max(np.mean(delta_s_h_vals), 1e-3)
+        info_factor = (delta_s_d + epsilon) / avg_delta_s_h
+        score = contribution * info_factor
+        return float(np.clip(score, 0.0, 1.0))
+
+    def compute_consistency_score(self,
+                                  past_responses: List[str],
+                                  encode_fn) -> float:
+        """
+        C_consistency via similaridade semântica de embeddings:
+        C = 1 - σ(sim) / (μ(sim) + ε)
+        """
+        if len(past_responses) < 2:
+            return 1.0
+
+        embeddings = [encode_fn(r) for r in past_responses]
+        sims = []
+        for i in range(len(embeddings)):
+            for j in range(i + 1, len(embeddings)):
+                sim = 1 - cosine(embeddings[i], embeddings[j])
+                sims.append(sim)
+
+        mu = np.mean(sims)
+        sigma = np.std(sims)
+        return float(np.clip(1.0 - sigma / (mu + 0.01), 0.0, 1.0))
+```
+
+---
+
+## 3.8 Integração Φ³ no Workflow ABC
+
+Fluxo resumido:
+
+1. Definir G (traços, relações) e ciclo C.  
+2. Calibrar \(\vec{s}(0)\) via HDSA.  
+3. Mapear vocabulário U.  
+4. Identificar mediadores causais relevantes (Φ³) via experimentos (patching, ablations, etc.).  
+5. Registrar mediadores com \(\kappa_i, \Delta\omega_i, \Delta S_H, \mathcal{V}_{CE}\).  
+6. Calcular Score(P) e iterar projeto do agente.  
+7. Usar sinastria (compatibilidade ABC×ABC) para orquestração multi‑agente.
+
+---
+
+## 3.9 Métricas de Consistência Ampliada
+
+- Consistência comportamental: C_consistency > 0.75.  
+- Alinhamento de ciclo: ≥ 80% das transições seguem o ciclo projetado.  
+- Ressonância simbólica: ativação coerente dos símbolos de U no contexto certo.  
+- Fidelidade causal média: \(\kappa_i\) médio > 0.85.  
+- Validação estrutural: ≥ 80% dos mediadores com \(\mathcal{V}_{CE}=1\).
+
+---
+
+## 3.10 Conclusão — O Triângulo Epistêmico
+
+O ABC com Φ³ fecha o triângulo:
+
+- Φ¹: onde a informação flui (atenção, localizações).  
+- Φ²: como ela se organiza (geometria, campos, SD).  
+- Φ³: por que um comportamento emerge (circuitos causais explicáveis).
+
+Assim, agentes deixam de ser personalidades “místicas” ou caixas‑pretas: tornam‑se sistemas latentes com identidade vetorial clara, dinâmica controlada e justificativa causal auditável.
+
+```
