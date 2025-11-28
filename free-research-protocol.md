@@ -34,7 +34,7 @@ O protocolo opera em **dois modos distintos que se retroalimentam**:
 
 ## 📊 O Blueprint Visual do Protocolo
 
-```
+```mermaid
 graph TD
     A["🟢 INÍCIO: Hipótese Inicial"] --> B["📡 Passo 1: Descoberta Ampla<br/>(LLMs de Busca)<br/>Perplexity, Gemini Search"];
     B --> C["🎯 Passo 2: Curadoria Inicial<br/>(Assistente)<br/>Organização do Ruído"];
