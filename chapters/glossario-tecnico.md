@@ -83,7 +83,7 @@ doi: "10.5281/zenodo.XXXXXXX"
 
 ## 🧭 6. Mapa de Interligações
 
-```
+```mermaid
 graph TD
     ELS[ELS: Microdinâmica] -->|Gera| ECL[ECL: Geometria Global]
     ECL -->|Estrutura| LSE[LSE: Engenharia]
