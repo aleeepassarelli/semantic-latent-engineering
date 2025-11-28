@@ -171,7 +171,7 @@ Mesmo sem validação mecanicista, CPPs são valiosos como:
 
 ## 4.8 Guia Prático: Quando Usar CPPs
 
-```mermaiad
+```mermaid
 graph TD
     A[Precisa de estilo específico?] -->|Sim| B{Identidade (ABC) já definida?}
     B -->|Sim| C[Escolher CPP:<br/>- Introspecção → Auto-Escritura<br/>- Análise → Mundo-Escritura<br/>- Criatividade → Divina-Escritura]
