@@ -1,4 +1,4 @@
-# 🧠 Protocolo de Descoberta e Síntese SLE
+# 🧠 Protocolo Oficial de Descoberta e Síntese SLE
 ## Engenharia Semântica Latente como Motor de Conhecimento
 
 **Versão**: 1.0 | **Data**: 2025-11-12 | **Status**: Ativo
