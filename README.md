@@ -172,13 +172,13 @@ flowchart LR
 
 ## 🧪 Validação Científica
 
-| Critério                       | Status          | Referência                                       |
-| ------------------------------ | --------------- | ------------------------------------------------ |
+| Critério                       | Status           | Referência                                       |
+| ------------------------------ | ---------------  | ------------------------------------------------ |
 | Fundamentos matemáticos        | ✅               | Anthropic (2024), OpenAI (2023)                  |
 | Sparse Autoencoding            | ✅               | “Interpretable Directions in Transformer Models” |
 | Attention Steering             | ✅               | “Feature Control via Concept Vectors”            |
-| Validação empírica (IDR, HDSA) | ⚗️ Em andamento | Experimentos em `research/`                      |
-| DOI Zenodo                     | 🚧 Pending      | {{DOI_URL}}                                      |
+| Validação empírica  (SD, HDSA) | ⚗️ Em andamento  | Experimentos em `research/`                      |
+| DOI Zenodo                     | 🚧 Pending       | {{DOI_URL}}                                      |
 
 ---
 
