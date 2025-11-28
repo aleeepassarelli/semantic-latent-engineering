@@ -167,21 +167,24 @@ Mesmo sem validação mecanicista, CPPs são valiosos como:
 3. Abstração útil: análogo a design patterns em software.  
 4. Hipótese testável: empurra o ecossistema para experimentos concretos.
 
----
+-----
 
 ## 4.8 Guia Prático: Quando Usar CPPs
 
 ```mermaid
 graph TD
-    A[Precisa de estilo específico?] -->|Sim| B{Identidade (ABC) já definida?}
-    B -->|Sim| C[Escolher CPP:<br/>- Introspecção → Auto-Escritura<br/>- Análise → Mundo-Escritura<br/>- Criatividade → Divina-Escritura]
-    C --> D[Aplique priming + valide output]
+    A[Precisa de estilo específico?] -->|Sim| B{Identidade já definida ABC?}
+    B -->|Sim| C[Escolha CPP apropriado:<br/>- Introspecção? -> Auto-Ref<br/>- Análise? -> Modelo Mundo<br/>- Criatividade? -> Gerativo]
+    C --> D[Aplique priming + Valide output]
     A -->|Não| E[Defina ABC primeiro]
     B -->|Não| E
-
+    
     style C fill:#0d1117,stroke:#00a3b8,stroke-width:2px
     style D fill:#00a3b8,stroke:#fff,stroke-width:2px
 ```
+
+-----
+
 
 Resumo textual:
 
