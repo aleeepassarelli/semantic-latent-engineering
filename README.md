@@ -98,7 +98,7 @@ O objetivo agora é refinar a seção **"Intenção Algébrica — Pilar do SLE"
 
 -----
 
-## 🧮 Intenção Algébrica — Pilar do SLE (Revisado)
+## 🧮 Intenção Algébrica — Pilar do SLE 
 
 Cada propósito em $\text{SLE}$ nasce da **formalização matemática da intenção**, definida por humanos e/ou $\text{IA}$. A Intenção Algébrica traduz objetivos subjetivos em vetores de **otimização** para a **Função de Dissonância Simbólica ($D$)**, garantindo que o agente maximize a *qualidade esperada por token* ($\rho(A)$).
 
@@ -166,12 +166,6 @@ intencao_alg:
 ````
 
 Blueprints validados vão para a [biblioteca SLE](#biblioteca-de-intenções-validada).
-
-
-***
-
-
-
 
 ***
 
