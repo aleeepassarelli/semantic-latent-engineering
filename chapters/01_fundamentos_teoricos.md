@@ -172,10 +172,11 @@ Fenômenos explicados:
 
 ---
 
-### 1.3.2 Mecanismo de Correção Segura de Rota (CSR)
+## 1.3.2 Mecanismo de Correção Segura de Rota (CSR)
+---
 
 O **CSR** é o protocolo formal para calibrar o **Estado Latente ($S_t$)** em tempo real, usando o feedback $U_t$ para evitar o **Drift Semântico** (incoerência do estado). Ele atua como um mecanismo de **Reforço no Contexto ($\text{RLHF-CW}$)**.
-
+---
 O CSR monitora a trajetória de $S_t$ através do **Juiz Matemático ($\text{FSAR}$)**, que calcula a coerência do *embedding* do passo atual, $\mathbf{e}_t$, em relação à **Âncora Semântica Dinâmica** ($\mathbf{e}_{\text{avg}}$) do histórico.
 
 #### A. A Função de Recompensa (SCS)
