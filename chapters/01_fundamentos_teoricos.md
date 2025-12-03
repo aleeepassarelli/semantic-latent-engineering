@@ -127,8 +127,10 @@ Componentes:
 - Feedback do Usuário: \(U_t \in \mathbb{R}^m\) é uma variável externa, em geral zero, mas ocasionalmente aplicando correções significativas.
 
 - Ruído Estocástico: \(\epsilon_t \sim \mathcal{N}(0, \sigma^2 I)\) representa aleatoriedade inerente ao sampling (temperatura, top-p etc.).
+---
 
-### 1.3.1 Otimização do Output Final
+## 1.3.1 Otimização do Output Final
+---
 
 O output final não é simplesmente \(S_T\), mas o resultado de uma otimização:
 ```
