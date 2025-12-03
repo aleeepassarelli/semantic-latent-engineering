@@ -231,6 +231,7 @@ graph LR
 ```
 
 ----
+
 ## 1.4 Conceitos Fundamentais
 ---
 ### 1.4.1 Semantic Density (SD, Information Density Ratio)
@@ -254,6 +255,7 @@ Classificação (regime típico):
 - Média densidade: \(0.3 < \rho < 0.6\)  
 - Baixa densidade: \(\rho < 0.3\)
 ----
+
 ### 1.4.2 High-Density Semantic Anchors (HDSAs)
 ---
 Um HDSA é uma construção lexical \(T_c\) que satisfaz:
@@ -294,6 +296,7 @@ Exemplo:
 - SD: 0.76 (alta densidade)  
 - Baseline: “Engenheiro com pensamento filosófico” → SD ≈ 0.41, 6 tokens.
 ----
+
 ### 1.4.3 Agent Behavioral Configuration (ABC)
 ---
 Um ABC é um grafo pesado:
