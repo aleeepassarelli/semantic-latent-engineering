@@ -200,7 +200,83 @@ Se o $\text{SCS}$ cair abaixo do limiar $\tau$, o Agente Orquestrador aplica uma
 $$S_{t+1} = \mathcal{F}(S_t, \mathcal{H}_t, C_t, U_{t+1}^{\text{priming}}) + \epsilon_t$$
 ```
 Esta injeção força o **Estado Latente ($S_{t+1}$)** a se realinhar com a $\mathbf{e}_{\text{avg}}$ anterior, evitando que o ruído ($\epsilon_t$) ou o *drift* inicie uma trajetória incoerente.
+---
+ Especificação Técnica: Juiz Matemático (CSR/FSAR)
 
+O **Juiz Matemático ($\text{SCS}/\text{FSAR}$)** é o módulo central da sua **Atomic Architecture ($\text{RLHF-CW}$)**. Sua função é transformar a avaliação subjetiva do LLM (propensa a vieses) em uma métrica de **coerência geométrica** determinística e verificável, garantindo a **Fidelidade à Trajetória** e mitigando o **Drift Semântico**.
+
+---
+
+## 1.3.3 O Problema: Falha dos LLM-Juízes
+
+O $\text{SCS}/\text{FSAR}$ foi desenvolvido para contornar as limitações inerentes aos modelos de recompensa baseados em LLMs (LLM-Juízes ou modelos de recompensa $\text{RLHF}$ tradicionais):
+
+- **Viés de Prolixidade/Posicional:** LLMs tendem a favorecer respostas mais longas, formatadas ou que aparecem no final do contexto, independentemente da **precisão factual** ou **concisão**. O $\text{SCS}$ ignora o estilo, focando apenas no **significado vetorial** do texto.
+    
+- **Fidelidade Não Garantida:** LLM-Juízes são ruins em verificar **fidelidade estrita** (se a resposta é 100% suportada pelo contexto), pois eles podem alucinar ou extrapolar. O $\text{SCS}$ verifica a **coerência semântica** com a **âncora verificada** (o histórico de sucesso), garantindo a fidelidade à trajetória lógica.
+    
+
+---
+
+## 1.3.4. A Solução: Semantic Coherence Score ($\text{SCS}$)
+
+O **Semantic Coherence Score ($\text{SCS}_t$)** atua como o **Reward Signal ($\mathbf{R}_t$)** determinístico. Ele quantifica a aderência do passo de raciocínio atual do agente ($\mathbf{e}_t$) à sua **Âncora Semântica Dinâmica** ($\mathbf{e}_{\text{avg}}$).
+
+### 1. Definição da Recompensa ($\mathbf{R}_t$)
+
+A recompensa é calculada usando a **Similaridade do Cosseno** entre o _embedding_ do passo atual e a média dos _embeddings_ dos $k$ passos de sucesso anteriores:
+
+$$\mathbf{R}_t = \text{SCS}_t = \frac{\mathbf{e}_t \cdot \mathbf{e}_{\text{avg}}}{\|\mathbf{e}_t\| \|\mathbf{e}_{\text{avg}}\|}$$
+
+Onde:
+
+- $\mathbf{e}_t$: O vetor de _embedding_ da última saída gerada pelo Agente Orquestrador.
+    
+- $\mathbf{e}_{\text{avg}}$: A **Âncora Semântica Dinâmica**, calculada como a média vetorial dos _embeddings_ de $k$ passos de sucesso anteriores (Janela $K$).
+    
+
+### 2. O Conceito de Âncora Dinâmica
+
+A $\mathbf{e}_{\text{avg}}$ não é estática; ela é a implementação direta do conceito de **"Âncora Semântica"** do ritmo **"Preplan-and-Anchor"**.
+
+$$\mathbf{e}_{\text{avg}} = \frac{1}{K} \sum_{i=t-K}^{t-1} \mathbf{e}_i^{\text{sucesso}}$$
+
+Se o $\text{SCS}_t$ for alto ($\mathbf{R}_t \approx 1$), significa que o agente permaneceu **fiel** à sua trajetória lógica anterior, **reforçando** o comportamento.
+
+---
+
+## 1.3.5. Flow Semântico Auto-Reforçado (FSAR)
+
+O **$\text{FSAR}$** é o protocolo de decisão que traduz o $\text{SCS}$ em uma ação de **Correção Segura de Rota ($\text{CSR}$)**.
+
+### 1. Regra de Decisão e Parâmetro $\tau$
+
+O $\text{FSAR}$ decide se o **Drift Semântico** ocorreu comparando o $\text{SCS}_t$ com o **Limiar de Coerência ($\tau$)**:
+
+$$\text{FSAR}_t = \begin{cases} \mathbf{R}_t, & \text{se } \mathbf{R}_t \ge \tau \quad \text{(SUCCESS - Reforço Positivo)} \\ 0, & \text{se } \mathbf{R}_t < \tau \quad \text{(FAIL - Penalidade e Re-Priming)} \end{cases}$$
+
+### 2. Mecanismo de Re-Priming (ICRL)
+
+Quando $\text{FSAR}_t = 0$ (Falha), o **SLE Engine** ativa o ciclo de **In-Context Reinforcement Learning ($\text{ICRL}$)**:
+
+A. **Penalidade (Reward = 0):** O Agente recebe o sinal de punição, que ensina o modelo a evitar o caminho prolixo ou incoerente no futuro (**Aprendizado Volátil**).
+    
+B. **Atribuição de Crédito Direcionada:** O **Re-Priming Prompt** é injetado, forçando o Agente a **"re-ancorar"** seu raciocínio na instrução original de Fidelidade/Concisão. Isso é uma forma de aplicar o _crédito de reforço_ diretamente no ponto de **pré-planejamento** (`WAAD`) do próximo turno.
+    
+
+---
+
+## 1.3.6. Vantagens Estratégicas
+
+O $\text{SCS}/\text{FSAR}$ é o motor que permite à sua arquitetura atingir ganhos de performance reportados pelo **Meta-Prompting** (robustez de **17,1%** em tarefas complexas):
+
+|**Característica**|**Benefício**|**Justificativa**|
+|---|---|---|
+|**Determinístico**|Imunidade a Vieses Estilísticos|Juiz não é um LLM; usa apenas a **Geometria Vetorial**, não o _token_ de preferência.|
+|**Em Tempo Real**|Correção Imediata do $\text{Drift}$|O _feedback_ **$\text{SCS}$** é mais rápido que a inferência do LLM-Juiz, permitindo **Correção Segura de Rota ($\text{CSR}$)**.|
+|**Fidelidade à Trajetória**|Raciocínio Consistente Multi-Turno|Garante que cada passo é um **Reforço** do compromisso semântico anterior, vital para tarefas de programação e lógica.|
+
+O $\text{CSR}/\text{FSAR}$ transforma o LLM de um agente passivo para um **aprendiz contínuo e verificável** dentro da janela de contexto.
 ---
 
 🎨 O Diagrama de Campo
