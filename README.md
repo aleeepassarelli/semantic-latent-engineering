@@ -93,24 +93,36 @@ Aqui, o rigor é regra; a criatividade, método; a beleza, resultado da síntese
 
 ***
 
+***
+
 ## 🧮 Intenção Algébrica — Pilar do SLE
 
-Cada propósito em SLE nasce de **formalização matemática da intenção**, definida por humanos e/ou IA.
+Cada propósito em SLE nasce de **formalização matemática da intenção**, traduzindo objetivos subjetivos em um vetor de otimização ($\mathbf{I}$) para a **Função de Dissonância Simbólica ($D$)**.
 
-**Exemplo-Blueprint:**
+A Intenção Algébrica garante que o **Output Final ($B_{\text{final}}$)** sempre minimize a dissonância em relação aos *traits* definidos.
+
+> $$B_{\text{final}} = \arg\min_{B \in \text{Options}(S_T)} D(B, \mathbf{I})$$
+
+**Exemplo-Blueprint (Intenção de Rigor e Clareza):**
+
 ```yaml
 intencao_alg:
-  descricao: "Gerar resumo técnico didático com foco em precisão e clareza"
-  equacao: "I = 0.7*Didatica + 0.8*Precisao + 0.9*Rigor"
-  variaveis:
-    Didatica: "Explicar conceitos sintéticos"
-    Precisao: "Evitar ambiguidades"
-    Rigor: "Conservar fidelidade teórica"
-  sd_min: 0.75
-  entropia_max: 0.18
-  validacao: "cross-validation"
-  status: "aprovada"
+  descricao: "Gerar resumo técnico didático com foco em precisão e clareza"
+  score_performance: "S_resumo = 0.7*Didatica + 0.8*Precisao + 0.9*Rigor"
+  variaveis:
+    Didatica: "Componente de D_aesthetic: Explicar conceitos sintéticos"
+    Precisao: "Componente de D_semantic: Evitar ambiguidades e alinhamento factual"
+    Rigor: "Inverso da Perda de Fidelidade (P_fidelity^-1)"
+  restricoes_minimas:
+    sd_min: 0.75 # Garantir que rho(A) >= 0.75
+    entropia_max: 0.18 # Limitar o Ruído Estocástico (sigma^2)
+  validacao: "cross-validation (FSAR-audited)"
+  status: "aprovada"
 ```
+
+
+
+
 Blueprints validados vão para a [biblioteca SLE](#biblioteca-de-intenções-validada).
 
 ***
