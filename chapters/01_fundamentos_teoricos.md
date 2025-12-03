@@ -9,9 +9,9 @@ keywords: ["Latent Space", "Concept Vectors", "Steering", "SD", "ABC"]
 ---
 
 # 📄 Capítulo 1: Fundamentos Teóricos da Semantic Latent Engineering
-
+----
 ## 1.1 Da Engenharia de Prompts à Arquitetura Semântica
-
+---
 A evolução dos Large Language Models criou três paradigmas sucessivos de interação:
 
 - Engenharia de Prompts (2020–2023): Otimização de instruções textuais para tarefas específicas. Foco: "como pedir corretamente".
@@ -23,9 +23,9 @@ A Semantic Latent Engineering (SLE) não substitui os paradigmas anteriores — 
 ---
 
 ## 1.2 Arquitetura de Transformers e Espaços Latentes
-
+--
 ### 1.2.1 Anatomia da Representação
-
+---
 Um transformer processa linguagem através de múltiplas camadas de transformação:
 ```
 \[
@@ -51,9 +51,9 @@ O mecanismo de atenção computa:
 \]
 ```
 Conceito-chave: o espaço latente não é um espaço opaco. Pesquisas recentes mostram que podemos decompor \(\vec{h}\) em concept vectors interpretáveis usando sparse autoencoders.
-
+----
 ### 1.2.2 Concept Vectors e Semantic Steering
-
+---
 Um concept vector \(\vec{c}_i\) representa uma “direção semântica” específica no espaço latente. Por exemplo:
 ```
 \[
@@ -80,7 +80,7 @@ Implicação: podemos intencionalmente ativar clusters específicos através da 
 ---
 
 ## 1.3 Modelo Formal de Interação com Memória Hierárquica
-
+---
 Diferentemente de modelos lineares de input–output, propomos um modelo de sistemas dinâmicos estocásticos para interação humano–LLM:
 ```
 \[
@@ -230,10 +230,11 @@ graph LR
     class Drift physics
 ```
 
+----
 ## 1.4 Conceitos Fundamentais
-
+---
 ### 1.4.1 Semantic Density (SD, Information Density Ratio)
-
+---
 A densidade semântica quantifica eficiência informacional:
 ```
 \[
@@ -252,9 +253,9 @@ Classificação (regime típico):
 - Alta densidade: \(\rho > 0.6\) com \(|T| < 10\)  
 - Média densidade: \(0.3 < \rho < 0.6\)  
 - Baixa densidade: \(\rho < 0.3\)
-
+----
 ### 1.4.2 High-Density Semantic Anchors (HDSAs)
-
+---
 Um HDSA é uma construção lexical \(T_c\) que satisfaz:
 ```
 \[
@@ -292,9 +293,9 @@ Exemplo:
 - Tokens: 2  
 - SD: 0.76 (alta densidade)  
 - Baseline: “Engenheiro com pensamento filosófico” → SD ≈ 0.41, 6 tokens.
-
+----
 ### 1.4.3 Agent Behavioral Configuration (ABC)
-
+---
 Um ABC é um grafo pesado:
 ```
 \[
@@ -335,7 +336,7 @@ Meta típica: \(C_{\text{consistency}} > 0.8\).
 ---
 
 ## 1.5 Transição Paradigmática
-
+---
 | Aspecto                  | Engenharia de Prompts        | Semantic Latent Engineering              |
 |--------------------------|------------------------------|------------------------------------------|
 | Papel do Criador         | Operador                     | Arquiteto de Sistemas                    |
@@ -351,7 +352,7 @@ Meta típica: \(C_{\text{consistency}} > 0.8\).
 ---
 
 ## 1.6 Conclusão
-
+---
 Este capítulo estabeleceu os fundamentos matemáticos e conceituais da Semantic Latent Engineering:
 
 1. Espaços latentes de LLMs são interpretáveis e manipuláveis via concept vectors, permitindo steering semântico dirigido.  
